@@ -1,0 +1,982 @@
+
+ *, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+  body {
+    font-family: gotham;
+    background-color: white;
+    }
+
+/* ------------------------------------------------ Header ------------------------------------------------ */
+header{
+  height: 100vh;
+}
+.color {
+  position:absolute;
+  height:100vh;
+  top: 0;
+}
+
+#whitebg { 
+  background-color: #ffffff;
+  width:100%; 
+  z-index:1;
+
+}
+
+#blackbg { 
+  background: black; 
+  width:50%; 
+  z-index:2;
+}
+
+h1, h2{
+  mix-blend-mode: difference;
+  color: white;
+  z-index: 3;
+}
+#makered { 
+  background-color: #0D2F7C;
+  mix-blend-mode: screen;
+  width:100%; 
+  z-index:4;
+}
+
+
+/* ------------------------------------------------ Découvrir ------------------------------------------------ */
+.invisible{
+  display: flex;
+  justify-content: center;
+}
+
+
+.invisible button{
+    z-index: 30;
+    padding: 20px;
+    padding: 20px 46px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: gotham;
+    outline: none;
+    border: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+    opacity: 0;
+  }  
+
+.decouvrir{
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.decouvrir button{
+mix-blend-mode: difference;
+  color: #fafafa;
+  z-index: 3;
+  padding: 20px;
+  position: relative;
+  padding: 20px 46px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: gotham;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.decouvrir button:before{
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fafafa;
+  border-radius: 30px;
+  }
+
+  .decouvrir button:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+  }
+  .decouvrir button:hover {
+    color: #fafafa;
+    border-radius: 30px;
+  }
+
+  .decouvrir button:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+  }
+
+.decouvrir button p{
+  mix-blend-mode: difference;
+    color: white;
+    z-index: 3;
+    transition-duration: .5s;
+}
+
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: transparent;
+}
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url('#goo');
+}
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+@supports (filter: url('#goo')) {
+  transform: translate3d(0, 150%, 0) scale(1.4);
+}
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+.decouvrir button:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+@supports (filter: url('#goo')) {
+  transform: translateZ(0) scale(1.4);
+}
+
+
+
+/* ------------------------------------------------ Button Email ------------------------------------------------ */
+
+.divEnvoie{
+    border-bottom-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    position: fixed;
+    right: 80px;
+    top: 0px;
+    padding: .5rem;
+    box-shadow: 0 1px 2px 0 rgba(13,47,124,.05);
+    z-index: 10;
+    background-color: #0D2F7C;
+}
+
+.divEnvoie button{
+    border-radius: 9999px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(43, 51, 69, 0.2);
+    height: 3rem;
+    width: 3rem;
+    background-color: #fafafa;
+    background-clip: padding-box;
+    padding: .6rem;
+    outline: none;
+
+}
+
+.divEnvoie button img{
+   width: 20px;
+   height: 20px;
+   margin-left: -2px;
+   transition-duration: .3s;
+}
+
+.divEnvoie button img:hover{
+  transform: scale(1.08);
+  cursor: pointer;
+ }
+
+ /* ------------------------------------------------ Arthur Chotard ------------------------------------------------ */
+
+#arthur-chotard{
+position: relative;
+top: 0%;
+width: 100%;
+height: 80vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+color: #0D2F7C;
+overflow: hidden;
+}
+
+#arthur-chotard h1{ 
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+#arthur-chotard h2{ 
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 3rem;
+  padding-top: 60px;
+}
+
+/* ------------------------------------------------ Logo ------------------------------------------------ */
+
+#logo svg{
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  z-index: 30;
+  width: 180px;
+}
+
+.logoSVG{
+  fill: #fafafa;
+  transition-duration: .5s;
+}
+
+.test{
+  height: 200vh;
+}
+
+
+/* ------------------------------------------------ Infos perso  ------------------------------------------------ */
+
+.section{
+  height: 100vh;
+  padding-top: 80px;
+}
+.sectionService{
+  height: 100%;
+}
+
+.titleSection{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+}
+
+h3{
+  color: #0D2F7C;
+  font-size: 50px;
+  font-family: gotham;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ligne{
+  height: 3px;
+  width: 45px;
+  background-color: rgb(255, 197, 51);
+  border-radius: 200px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------------------------------------------ À Propos ------------------------------------------------ */
+.sectionPropos{
+  height: 100%;
+}
+
+.divImg{
+  width: 400px;
+  height: 500px;
+  margin: auto;
+}
+
+.divImg img{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+
+.cv{
+ text-align: center;
+ padding-top: 40px;
+ width: 55%;
+ margin: auto;
+
+}
+
+.cv p{
+  font-size: 20px;
+  font-family: Montserrat,sans-serif;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.cvGras{
+  font-weight: bold;
+  color: #0D2F7C;
+}
+
+.cv a{
+  color: rgb(144, 189, 244);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------ Service  ------------------------------------------------ */
+
+.divServices{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.services1{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.services2{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+
+.divServices p{
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: Montserrat,sans-serif;
+  font-weight: 400;
+  color: #adadad;
+}
+
+.divServices h4{
+  font-family: gotham;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #0D2F7C;
+  padding-top: 20px;
+}
+
+
+
+.single-chart {
+  width: 150px ;  
+  justify-content: space-around ;
+  margin: auto;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+
+.circular-chart.blue .circle {
+  stroke: rgb(144, 189, 244);
+}
+
+.percentage {
+  fill: #666;
+  font-family: gotham;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+.cirle{
+  width: 100px;
+  height: 100px;
+  border-radius: 9999px;
+  margin: auto;
+  background-image: url(../image/mac2.jpg);
+  background-size: cover;
+}
+
+
+/* ------------------------------------------------ Portfolio ------------------------------------------------ */
+.divPortfolio{
+  height: 100%;
+  overflow: hidden;
+}
+
+.projet{
+  width: 864px;
+  height: 472px;  
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+}
+
+.infosProjet{
+  border: solid 1px #0D2F7C;
+  border-right: 10px;
+  width: 50%;
+  height: 472px;  
+  border-radius: 10px 0px 0px 10px;
+  display: flex;
+}
+
+.imgProjet{
+  background-image: url(../image/mac2.jpg);
+  background-size: cover;
+  width: 50%;
+  height:  472px ;  
+  border-radius: 0px 10px 10px 0px;
+}
+
+.n2{
+  margin-top: 50px;
+}
+
+.infosProjet2{
+  border: solid 1px #0D2F7C;
+  border-left: none;
+  width: 50%;
+  height: 472px;  
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+}
+
+.imgProjet2{
+  background-image: url(../image/kooks.jpg);
+  background-size: cover;
+  width: 50%;
+  height:  472px ;  
+  border-radius: 10px 0px 0px 10px;
+}
+
+.conteneurInfo{
+  width: 70%;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.titleProjet{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0D2F7C;
+}
+
+.descriptionProjet{
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 20px;
+  color: #8c93bd;
+  font-family: Montserrat,sans-serif;
+}
+
+.button{
+    box-shadow: 0 11px 16px 0 rgba(70,89,138,.25);
+    background-color:rgb(144, 189, 244) ;
+    text-decoration: none;
+    height: 50px;
+    padding: 16px 72px;
+    font-weight: bold;
+    font-size: .688rem;
+    line-height: 18px;
+    letter-spacing: 1.54px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    margin-top: 100px;
+    color: #fafafa;
+
+}
+
+.button:hover {
+  opacity: .9;
+}
+
+
+.buttonDiv{
+  display: flex;
+}
+
+/* ------------------------------------------------ Contact ------------------------------------------------ */
+
+.contactDiv{
+  position: relative;
+  background-image: url(../image/bgContact.svg);
+  background-size: cover;
+  height: 400px;
+  display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 80px;
+}
+
+.formulaireDiv{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formulaireDiv p{
+  color:white;
+}
+
+.formulaireDiv h3{
+  font-size: 43px;
+  color: white;
+  font-weight: bold;
+  line-height: 45px;
+  margin-top: 150px;
+}
+
+.formulaireDiv form{
+  margin-top: 150px;
+  position: relative;
+}
+
+input {
+  border-radius: 9999px;
+  font-size: .85rem;
+  line-height: 2;
+  padding: .75rem 1.5rem;
+  color: #0D2F7C;
+  width: 270px;
+  border: none;
+  font-family: Montserrat,sans-serif;
+  font-weight: bold;
+}
+
+::placeholder{
+  font-weight: 500;
+}
+
+input:focus{
+  outline: none;
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 9999px;
+  padding:10px 25px;
+  background-color: white;
+  border: none;
+  margin-top: 20px;
+  position: absolute;
+  right: 0;
+  font-family: gotham;
+  color: #0D2F7C;
+  transition-duration: .5s;
+}
+
+.btn:hover{
+  cursor: pointer;
+  padding:10px 30px;
+  letter-spacing: 1.5px;
+}
+
+.btn:focus{
+outline: none;}
+
+.formulaireDiv a{
+  color: rgb(144, 189, 244);
+}
+
+.sujet .select{
+  -webkit-appearance: none;
+  border-radius: 9999px;
+  line-height: 2;
+  padding: .75rem 1.5rem;
+  color: #0D2F7C;
+  width: 270px;
+  border: none;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: Montserrat,sans-serif;
+  background-color: white;
+  font-size: 13.333px;
+}
+
+.error{
+  color: #fafafa;
+  font-family: Montserrat,sans-serif;
+  font-weight: bold;
+}
+
+.success{
+  color: #fafafa;
+  font-family: Montserrat,sans-serif;
+  font-weight: bold;
+}
+
+.buttonPop{
+  display: flex;
+}
+
+.popUp{
+  margin-top: 70px;
+  text-align: right;
+  font-size: 15px;
+  height: 20px;
+  width: 100%;
+}
+
+
+
+/* ------------------------------------------------ Footer ------------------------------------------------ */
+
+footer{
+  height: 77px;
+  background-color: #2b3345;
+  overflow: hidden;
+}
+
+.copyright{
+  width: 70%;
+  float: right;
+  height: 100%;
+}
+.copyright p{
+  line-height: 77px;
+  text-align: right;
+  margin-right: 15%;
+  font-size: .75rem;
+  color: #bababa;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+/* ------------------------------------------------ Media ------------------------------------------------ */
+
+@media screen and (max-width: 1334px) {
+
+  .formulaireDiv h3{
+    font-size: 35px;
+  }  
+
+
+}
+
+@media screen and (max-width: 1213px ) {
+
+  .formulaireDiv{
+    width: 80%;
+  }
+
+ 
+}
+
+@media screen and (max-width: 1066px ) {
+
+  .formulaireDiv{
+    display: block;
+  }
+  .popUp{
+    margin-top: 28px;
+    margin-left: 20px;
+    text-align: left;
+  }
+  
+
+  .formulaireDiv h3{
+    margin-top: 240px;
+  }  
+
+  .formulaireDiv form{
+    margin-top: 30px;
+    position: relative;
+  }
+
+  .btn {
+    margin-top: 20px;
+    position: initial;
+  }
+
+.contactDiv{
+  height: 540px;
+}
+
+.cv{   
+  text-align: justify;
+}
+
+}
+
+@media screen and (max-width: 1000px) {
+  
+  .projet{
+    display: flex;
+    width: 65%;
+    flex-direction: column-reverse;
+    height: 500px;
+  }
+
+  .infosProjet{
+    border: 1px solid #0D2F7C;
+    border-top: 0px;
+    width: 100%;
+    height: 46%;   
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+  }
+
+  .imgProjet{
+    width: 100%;
+    height: 54%;   
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .n2{
+    flex-direction: column;
+  }
+
+.infosProjet2{
+  border: solid 1px #0D2F7C;
+  border-top: none;
+  width: 100%;
+  height: 46%;    
+  border-radius: 0px 0px 10px 10px;
+}
+
+.imgProjet2{
+  width: 100%;
+  height: 54%;    
+  border-radius: 10px 10px 0px 0px;
+}
+
+.conteneurInfo{
+  width: 100%;
+  height: 60%;
+}
+
+.titleProjet{
+  text-align: center;
+}
+
+.descriptionProjet{
+  text-align: center;
+}
+.button{
+  margin-top: 40px;
+}
+
+.buttonDiv{
+display: flex;
+height: 100%;
+justify-content: center;
+}
+
+.cv{
+  width: 65%;
+ }
+
+}
+
+@media screen and (max-width: 833px){
+  
+  .copyright p{
+    line-height: 50px;
+    margin-right: 25px;
+  }
+
+  footer{
+    height: 50px;
+  }
+
+  .contactDiv{
+    height: 570px;
+  }
+
+
+
+}
+
+@media screen and (max-width: 828px) {
+  .projet{
+    width: 75%;
+    height: 500px;
+  }
+
+  .cv{
+    width: 70%;
+   }
+
+}
+
+@media screen and (max-width: 800px) {
+  
+  .services1{
+    display: block;
+  }
+  
+  .services2{
+    display: block;
+    margin-top: 0px;
+  }
+
+  #cms, #seo, #marketing{
+    margin-top: 90px;
+  }
+
+}
+
+@media screen and (max-width: 726px ) {
+
+  .formulaireDiv{
+    width: 90%;
+  }
+
+  .formulaireDiv h3{
+    font-size: 32px;
+  }  
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .divEnvoie{
+    right: 15px;
+}
+
+header{
+  height: 90vh;
+}
+
+#logo svg{
+  width: 130px;
+}
+
+#arthur-chotard{
+  height: 70vh;
+}
+
+.color {
+    position:absolute;
+    height:90vh;
+    top: 0;
+}
+
+#arthur-chotard h2{ 
+  font-size: 2rem;
+}
+
+.divImg{
+  width: 350px;
+  height: 450px;
+}
+
+}
+
+@media screen and (max-width: 635px) {
+  .projet{
+    width: 87%;
+    height: 520px;
+  }
+
+}
+@media screen and (max-width: 501px) {
+  .projet{
+    width: 94%;
+    height: 520px;
+  }
+
+  #arthurFooter img{
+    height: 60%;
+  }
+
+  .formulaireDiv h3{
+    font-size: 28px;
+  }  
+
+  .formulaireDiv{
+    width: 95%;
+  }
+
+  
+  .cv{
+    width: 85%;
+   }
+
+
+   .copyright p{
+    margin-right: 15px;
+  }
+
+  .formulaireDiv h3{
+    margin-top: 150px;
+  }
+
+  .contactDiv{
+    height: 520px;
+    background-position: center;
+  }
+
+  .cv{
+    text-align: left;
+   }
+  
+}

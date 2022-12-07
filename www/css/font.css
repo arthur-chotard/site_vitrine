@@ -1,0 +1,33 @@
+/* -------------------------------------------------------- Font ---------------------------------------------------------- */
+
+@font-face {
+	font-family: "gotham";
+	src: url('../fonts/GothaProMed.otf');
+}
+
+@font-face {
+	font-family: "gotham";
+	font-weight: bold;
+	src: url('../fonts/GothaProBol.otf');
+}
+
+@font-face {
+	font-family: "gotham";
+	font-style: italic;
+	src: url('../fonts/GothaProIta.otf');
+}
+
+@font-face {
+	font-family: "gotham";
+	font-weight: medium;
+	src: url('../fonts/GothaProMed.otf');
+}
+
+@font-face {
+	font-family: "gotham";
+	font-weight: lighter;
+	src: url('../fonts/GothaProLig.otf');
+}
+
+
+

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /inc/
+Disallow: /fonts/
+
+User-agent: *
+Disallow:  /perso/
+
+sitemap : https://www.arthur-chotard.com/sitemap.xml
