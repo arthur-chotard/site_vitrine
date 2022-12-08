@@ -1,7 +1,7 @@
 <?php
 session_start();  // Commencer session pour récupérer données
 
-$bdd = new PDO("mysql:host=arthurcarthur.mysql.db;dbname=arthurcarthur", 'arthurcarthur', 'vbGDVs62JEVQ');
+$bdd = new PDO("mysql:host=arthurcarthur.mysql.db;dbname=arthurcarthur", 'arthurcarthur', 'XXX');
 
 
 // Définition variable 
